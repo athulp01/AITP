@@ -18,7 +18,7 @@ def train_classifier(path):
 
 def predict_from_input_file(path):
     image = cv2.imread(path)
-    classifier.predict(image, 0.8)
+    cv2.imwrite("resilt.jpg", classifier.predict(image, 0.8))
 
 if __name__ == "__main__":
     train_classifier()
